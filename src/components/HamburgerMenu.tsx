@@ -52,16 +52,22 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
             : "bg-white fixed top-0 left-[-100%]  h-screen z-10 "
         }
       >
-        <div className="w-[63px] h-[27px]">
-          <h2 className="font-black text-[30px] p-4">Logo</h2>
-        </div>
+        <div className="mx-auto flex justify-between items-center pt-4">
+          <div>
+            <img
+              src="/4.png"
+              alt=""
+              className=" cursor-pointer w-[35px] mx-4"
+            />
+          </div>
 
-        <img
-          src="/closing.svg"
-          alt=""
-          onClick={() => props.setNav(!props.nav)}
-          className="right-4 top-4 cursor-pointer absolute duration-300"
-        />
+          <img
+            src="/closing.svg"
+            alt=""
+            onClick={() => props.setNav(!props.nav)}
+            className="right-4 cursor-pointer absolute duration-300"
+          />
+        </div>
 
         <nav>
           <ul className="flex flex-col p-4 mt-16 space-y-8">
