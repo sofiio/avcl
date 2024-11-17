@@ -1,6 +1,6 @@
 function WhyChooseUs() {
   return (
-    <div className="max-w-[1440px] mx-auto items-center">
+    <div className="max-w-[1440px] mx-auto items-center " id="why-choose-us">
       <div className="2xl:ml-[57px] h-[70px] sm:h-[100px] md:h-[150px] xl:h-[160px] 2xl:h-[100px] 2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] xl:p-4 2xl:p-0 mt-4 md:mt-[40px] lg:mt-[87px] flex text-center justify-center mx-auto 2xl:mx-0">
         <h1
           className="xl:text-[45px] p-6 text-[24px] sm:text-[40px] md:text-[64px] font-quinapple text-blue-900"

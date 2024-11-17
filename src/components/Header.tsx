@@ -1,131 +1,94 @@
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import CustomButton from "./CustomButton";
 import HamburgerMenu from "./HamburgerMenu";
-import { useState } from "react";
 
-function Header() {
-  const [nav, setNav] = useState(false);
-  const navigate = useNavigate();
+// Define a functional component type
+const Header: React.FC = () => {
+  const [nav, setNav] = useState<boolean>(false);
 
-  const handleAboutUsClick = () => {
-    navigate("/AboutUs");
-    window.scrollTo(0, 0); // Scroll to the top of the page
+  // Function to get the height of the sticky header dynamically
+  const getHeaderHeight = (): number => {
+    const header = document.querySelector(".z-20") as HTMLElement; // Type assertion for HTMLElement
+    return header ? header.offsetHeight : 0;
   };
 
-  const handleTheatreClick = () => {
-    navigate("/Theatre");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
-  const handleMusicClick = () => {
-    navigate("/Music");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
-  const handleLiteratureClick = () => {
-    navigate("/Literature");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
-  const handleGalleryClick = () => {
-    navigate("/Gallery");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
-  const handleHomeClick = () => {
-    navigate("/");
-    window.scrollTo(0, 0); // Scroll to the top of the page
+  // Generic scroll function to scroll to different sections
+  const scrollToSection = (id: string): void => {
+    const element = document.getElementById(id);
+    const headerHeight = getHeaderHeight();
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - headerHeight, // Subtract the header height
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
-    <div className="z-20 font-sans sticky  top-0 w-full h-[55px] xl:h-[72px] mx-auto bg-blue-200">
+    <div className="z-20 font-sans sticky top-0 w-full h-[55px] xl:h-[72px] mx-auto bg-blue-200">
       <div
         className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0
        flex mx-auto justify-between items-center h-full"
       >
-        <Link to="/">
+        <div>
           <img
             src="/4.png"
-            alt=""
-            className="w-[30px] sm:w-[35px] md:w-[40px] xl:w-[50px]"
-            onClick={handleHomeClick}
+            alt="logo"
+            className="w-[30px] sm:w-[35px] md:w-[40px] xl:w-[50px] cursor-pointer"
+            onClick={() => scrollToSection("start")} // Scroll to start section
           />
-        </Link>
+        </div>
 
         <div className="hidden xl:flex items-center space-x-[32px] text-blue-950 font-bold text-[16px]">
-          <Link to="/">
+          <div onClick={() => scrollToSection("start")}>
+            <h1 className="cursor-pointer hover:text-white">მთავარი</h1>
+          </div>
+          <div>
             <h1
-              onClick={handleHomeClick}
               className="cursor-pointer hover:text-white"
-            >
-              მთავარი
-            </h1>
-          </Link>
-          <Link to="/AboutUs">
-            <h1
-              onClick={handleAboutUsClick}
-              className="cursor-pointer hover:text-white"
+              onClick={() => scrollToSection("why-choose-us")}
             >
               ჩვენს შესახებ
             </h1>
-          </Link>
-          <Link to="/Theatre">
-            <h1
-              onClick={handleTheatreClick}
-              className="cursor-pointer hover:text-white"
-            >
-              სერვისები
-            </h1>
-          </Link>
-          <Link to="/Music">
-            <h1
-              onClick={handleMusicClick}
-              className="cursor-pointer hover:text-white"
-            >
-              ექიმები
-            </h1>
-          </Link>
-          <Link to="/Literature">
-            <h1
-              onClick={handleLiteratureClick}
-              className="cursor-pointer hover:text-white"
-            >
-              სტატისტიკა
-            </h1>
-          </Link>
-          <Link to="/Gallery">
-            <h1
-              onClick={handleGalleryClick}
-              className="cursor-pointer hover:text-white"
-            >
-              კონტაქტი
-            </h1>
-          </Link>
-          <Link to="/AboutUs">
+          </div>
+          <div onClick={() => scrollToSection("services")}>
+            <h1 className="cursor-pointer hover:text-white">სერვისები</h1>
+          </div>
+          <div onClick={() => scrollToSection("doctors")}>
+            <h1 className="cursor-pointer hover:text-white">ექიმები</h1>
+          </div>
+          <div onClick={() => scrollToSection("statistics")}>
+            <h1 className="cursor-pointer hover:text-white">სტატისტიკა</h1>
+          </div>
+          <div onClick={() => scrollToSection("contacts")}>
+            <h1 className="cursor-pointer hover:text-white">კონტაქტი</h1>
+          </div>
+          <div>
             <CustomButton
+              onClick={() => scrollToSection("contacts")}
               text="დაჯავშნა"
               textColor="text-blue-950"
               width="w-[150px]"
               height="h-[50px]"
               marginTop="mt-0"
               backgroundColor="bg-white"
-              onClick={handleAboutUsClick}
               rounded="rounded-full"
               imgHoverEffect="hover:invert"
               hoverEffect="hover:bg-customgrey  hover:text-black hover:border hover:border-black"
             />
-          </Link>
+          </div>
         </div>
+
         <div
           className="w-[39px] h-[39px] block xl:hidden"
           onClick={() => setNav(true)}
         >
-          <img src="/burgermenu.png" alt="" className=" cursor-pointer" />
+          <img src="/burgermenu.png" alt="hamburger menu" className=" cursor-pointer" />
         </div>
       </div>
       <HamburgerMenu nav={nav} setNav={setNav} />
     </div>
   );
-}
+};
 
 export default Header;

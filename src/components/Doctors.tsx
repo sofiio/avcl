@@ -60,10 +60,10 @@ const DoctorsSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full mt-24 overflow-hidden">
-      <h2 className="text-2xl font-bold text-center mb-4">ჩვენი ექიმები</h2>
+    <div className="w-full lg:mt-24 mt-8 overflow-hidden" id="doctors" >
+      <h2 className="text-2xl font-bold text-center mb-4 mt-12">ჩვენი ექიმები</h2>
       <div className="flex justify-center mb-4">
-        <img src="doct.jpg" alt="" className="w-8 h-8" /> {/* Replace with your icon URL */}
+        <img src="doct.jpg" alt="" className="w-8 h-8 mt-4" /> {/* Replace with your icon URL */}
       </div>
       <Slider {...settings} className="slider">
         {doctorsData.map((doctor, index) => (
@@ -76,7 +76,7 @@ const DoctorsSlider: React.FC = () => {
           </div>
         ))}
       </Slider>
-      <div className="flex justify-center mt-6">
+      <div className="flex justify-center mt-8">
         <div className="w-4 h-4 bg-blue-500 rounded-full" />
       </div>
     </div>
