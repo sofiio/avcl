@@ -31,28 +31,13 @@ const servicesData = [
     title: "Service Six",
     description: "Description for Service Six.",
   },
-  {
-    logo: "/8.jpg", // Replace with your image URL
-    title: "Service Seven",
-    description: "Description for Service Seven.",
-  },
-  {
-    logo: "/8.jpg", // Replace with your image URL
-    title: "Service Eight",
-    description: "Description for Service Eight.",
-  },
-  {
-    logo: "/8.jpg", // Replace with your image URL
-    title: "Service Nine",
-    description: "Description for Service Nine.",
-  },
 ];
 
 const Services: React.FC = () => {
   return (
-    <div className="my-24 px-4 bg-blue-50 " id="services">
-      <h2 className="text-3xl font-bold text-center py-10">ჩვენი სერვისები</h2>
-      <div className="grid md:w-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
+    <div className="my-24 px-4 bg-customblue" id="services">
+      <h2 className="text-3xl text-customWhite text-center py-10">ჩვენი სერვისები</h2>
+      <div className="grid md:w-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center py-12">
         {servicesData.map((service, index) => (
           <div
             key={index}

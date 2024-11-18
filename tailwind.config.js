@@ -9,6 +9,9 @@ export default {
       colors: {
         customBlue: '#00EFFF',
         customgrey: '#B1B4AD',
+        customblue: '#5263CC', 
+        customWhite: '#FCF8ED',
+        customDarkBlue: '#040059'
       },
       animation: {
         textMove: 'textMove 2s ease-in-out infinite',
