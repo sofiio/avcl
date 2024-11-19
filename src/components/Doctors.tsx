@@ -60,8 +60,8 @@ const DoctorsSlider: React.FC = () => {
   };
 
   return (
-    <div className="w-full lg:mt-24 mt-8 overflow-hidden" id="doctors" >
-      <h2 className="text-2xl font-bold text-center mb-4 mt-12">ჩვენი ექიმები</h2>
+    <div className="w-full overflow-hidden" id="doctors" >
+      <h2 className="text-[25px] text-customDarkBlue text-center">ჩვენი ექიმები</h2>
       <div className="flex justify-center mb-4">
         <img src="doct.jpg" alt="" className="w-8 h-8 mt-4" /> {/* Replace with your icon URL */}
       </div>
@@ -69,15 +69,15 @@ const DoctorsSlider: React.FC = () => {
         {doctorsData.map((doctor, index) => (
           <div key={index} className="p-4">
             <div className="bg-customblue rounded-lg shadow-md flex flex-col items-center p-4 mx-auto max-w-xs">
-              <img src={doctor.image} alt={doctor.name} className="w-24 h-24 rounded-full mb-2" />
-              <h3 className="text-lg font-semibold">{doctor.name}</h3>
-              <p className="text-customWhite">{doctor.profession}</p>
+              <img src={doctor.image} alt={doctor.name} className="w-[250px] h-48 rounded-md mb-2" />
+              <h3 className="text-[16px] font-semibold">{doctor.name}</h3>
+              <p className="text-customWhite text-[13px]">{doctor.profession}</p>
             </div>
           </div>
         ))}
       </Slider>
       <div className="flex justify-center mt-8">
-        <div className="w-4 h-4 bg-customblue rounded-full" />
+        <div className="w-4 h-4 bg-customblue rounded-sm" />
       </div>
     </div>
   );

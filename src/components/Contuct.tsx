@@ -8,16 +8,16 @@ const Contuct: React.FC = () => {
       {/* First child div: Contact Information */}
       <div className="relative flex-1 mx-auto lg:w-[900px] h-[500px] w-full overflow-hidden" id="contacts">
         <div
-          className="absolute inset-0 bg-cover bg-center filter blur-sm"
-          style={{ backgroundImage: "url('/doctor2.jpg')" }} // Replace with your image URL
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/contactbg.png')" }} // Replace with your image URL
         />
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-white p-4 bg-black bg-opacity-50 text-sm md:text-lg">
-          <h3 className="text-xl font-bold">Working Hours</h3>
-          <p>Mon-Fri: 9 AM - 5 PM</p>
-          <p>Sat-Sun: Closed</p>
-          <h3 className="text-xl font-bold mt-4">Contact Us</h3>
-          <p>Email: info@example.com</p>
-          <p>Phone: (123) 456-7890</p>
+          <h3 className="text-[16px] font-bold">სამუშაო საათები</h3>
+          <p className='text-[13px]'>ორშაბათი-პარასკევი: 10:00 - 18:00</p>
+          <p className='text-[13px]'>შაბათი: 10:00 - 14:00 (მხოლოდ ქუთაისის ფილიალი)</p>
+          <h3 className="text-[16px] font-bold mt-4">კონტაქტი</h3>
+          <p className='text-[13px]'>Email: Adeishviliclinic@gmail.com</p>
+          <p className='text-[13px]'>ტელეფონი: 514 74 43 43</p>
         </div>
       </div>
 
