@@ -4,6 +4,9 @@
 /* Add this to your main CSS file */
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+@import url('https://fonts.ge/en/font/673/BPG-Mrgvlovani-Caps-2010');
+@import url('https://fonts.ge/ka/font/366/Geo-Arial');
+
 
 /* @tailwind base;
 @tailwind components;

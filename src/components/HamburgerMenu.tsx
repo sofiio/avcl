@@ -1,5 +1,4 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 
 // Define an interface for the component props
 interface HamburgerMenuProps {
@@ -7,36 +6,33 @@ interface HamburgerMenuProps {
   setNav: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+// Generic scroll function to scroll to different sections
+const scrollToSection = (id: string): void => {
+  console.log(`Scrolling to section: ${id}`); // Added log to check if the function is triggered
+  const element = document.getElementById(id);
+
+  const getHeaderHeight = (): number => {
+    const header = document.querySelector(".z-20") as HTMLElement; // Type assertion for HTMLElement
+    return header ? header.offsetHeight : 0;
+  };
+
+  const headerHeight = getHeaderHeight();
+  if (element) {
+    window.scrollTo({
+      top: element.offsetTop - headerHeight, // Subtract the header height
+      behavior: "smooth",
+    });
+  }
+};
+
 // Use the interface as the type for the props
 const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
-  const navigate = useNavigate();
-  const handleAboutUsClick = () => {
-    navigate("/AboutUs");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-  const handleTheatreClick = () => {
-    navigate("/Theatre");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
+  const [isEnglish, setIsEnglish] = useState<boolean>(true); // State to toggle the flag
 
-  const handleMusicClick = () => {
-    navigate("/Music");
-    window.scrollTo(0, 0); // Scroll to the top of the page
+  // Function to toggle language flag
+  const toggleLanguage = () => {
+    setIsEnglish(!isEnglish); // Toggle between English and Georgian flags
   };
-  const handleLiteratureClick = () => {
-    navigate("/Literature");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
-  const handleGalleryClick = () => {
-    navigate("/Gallery");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-  const handleHomeClick = () => {
-    navigate("/");
-    window.scrollTo(0, 0); // Scroll to the top of the page
-  };
-
   return (
     <>
       <div
@@ -48,16 +44,24 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
       <div
         className={
           props.nav
-            ? "bg-white fixed top-0 right-0 pl-4 w-screen h-screen z-10 "
+            ? "bg-white fixed top-0 left-0 pl-4 w-[250px] md:w-[300px] lg:w-[400px] h-screen z-10 "
             : "bg-white fixed top-0 left-[-100%]  h-screen z-10 "
         }
       >
         <div className="mx-auto flex justify-between items-center pt-4">
-          <div>
+          {/* <div>
             <img
               src="/4.png"
               alt=""
-              className=" cursor-pointer w-[35px] mx-4"
+              className=" cursor-pointer w-[25px] mx-4"
+            />
+          </div> */}
+          {/* Language toggle button */}
+          <div onClick={toggleLanguage} className="cursor-pointer">
+            <img
+              src={isEnglish ? "/flag1.svg" : "/flag2.svg"} // Conditional rendering of flags
+              alt="language flag"
+              className="w-[30px] h-[20px] 2xl:ml-4"
             />
           </div>
 
@@ -65,43 +69,53 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = (props) => {
             src="/closing.svg"
             alt=""
             onClick={() => props.setNav(!props.nav)}
-            className="right-4 cursor-pointer absolute duration-300"
+            className="right-4 cursor-pointer absolute duration-300 w-[30px]"
           />
         </div>
 
         <nav>
-          <ul className="flex flex-col p-4 mt-16 space-y-8">
-            <Link to="/">
-              <li onClick={handleHomeClick} className=" cursor-pointer">
-                Home
-              </li>{" "}
-            </Link>
-            <Link to="/AboutUs">
-              <li onClick={handleAboutUsClick} className=" cursor-pointer">
-                About Us
-              </li>{" "}
-            </Link>
-            <Link to="/Theatre">
-              <li onClick={handleTheatreClick} className=" cursor-pointer">
-                Theatre
-              </li>{" "}
-            </Link>
-            <Link to="/Music">
-              <li onClick={handleMusicClick} className=" cursor-pointer">
-                Music
-              </li>{" "}
-            </Link>
-            <Link to="/Literature">
-              <li onClick={handleLiteratureClick} className=" cursor-pointer">
-                Literature
-              </li>{" "}
-            </Link>
-            <Link to="/Gallery">
-              <li onClick={handleGalleryClick} className=" cursor-pointer">
-                Gallery
-              </li>{" "}
-            </Link>
-          </ul>
+          <div className="flex flex-col p-4 mt-8 space-y-8 font-arial text-[16px]">
+            <div>
+              <h1
+                className=" cursor-pointer hover:text-customblue"
+                onClick={() => scrollToSection("start")}
+              >
+                მთავარი
+              </h1>
+            </div>
+            <div>
+              <h1
+                className=" cursor-pointer hover:text-customblue"
+                onClick={() => scrollToSection("why-choose-us")}
+              >
+                ჩვენს შესახებ
+              </h1>
+            </div>
+            <div>
+              <h1
+                className=" cursor-pointer hover:text-customblue"
+                onClick={() => scrollToSection("services")}
+              >
+                სერვისები
+              </h1>
+            </div>
+            <div>
+              <h1
+                className=" cursor-pointer hover:text-customblue"
+                onClick={() => scrollToSection("doctors")}
+              >
+                ექიმები
+              </h1>
+            </div>
+            <div>
+              <h1
+                className=" cursor-pointer hover:text-customblue"
+                onClick={() => scrollToSection("contacts")}
+              >
+                კონტაქტი
+              </h1>
+            </div>
+          </div>
         </nav>
       </div>
     </>

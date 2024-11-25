@@ -5,6 +5,7 @@ import HamburgerMenu from "./HamburgerMenu";
 // Define a functional component type
 const Header: React.FC = () => {
   const [nav, setNav] = useState<boolean>(false);
+  const [isEnglish, setIsEnglish] = useState<boolean>(true); // State to toggle the flag
 
   // Function to get the height of the sticky header dynamically
   const getHeaderHeight = (): number => {
@@ -24,8 +25,13 @@ const Header: React.FC = () => {
     }
   };
 
+  // Function to toggle language flag
+  const toggleLanguage = () => {
+    setIsEnglish(!isEnglish); // Toggle between English and Georgian flags
+  };
+
   return (
-    <div className="z-20 font-sans sticky top-0 w-full h-[55px] xl:h-[72px] mx-auto bg-customblue">
+    <div className="z-20 font-sans sticky top-0 w-full h-[55px] xl:h-[72px] mx-auto bg-customDarkBlue ">
       <div
         className="2xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] p-4 2xl:p-0
        flex mx-auto justify-between items-center h-full"
@@ -34,54 +40,75 @@ const Header: React.FC = () => {
           <img
             src="/1.png"
             alt="logo"
-            className="w-[30px] sm:w-[35px] md:w-[40px] xl:w-[150px] cursor-pointer"
+            className="w-[70px]  2xl:w-[150px] xl:w-[100px] cursor-pointer"
             onClick={() => scrollToSection("start")} // Scroll to start section
           />
         </div>
 
-        <div className="hidden xl:flex items-center space-x-[32px] text-customWhite font-bold text-[16px]">
+        <div className="hidden xl:flex items-center space-x-[32px] text-customWhite font-mrglovani font-bold 2xl:text-[16px] xl:text-[14px]">
           <div onClick={() => scrollToSection("start")}>
-            <h1 className="cursor-pointer hover:text-white">მთავარი</h1>
+            <h1 className="cursor-pointer text-white hover:text-customblue ">
+              მთავარი
+            </h1>
           </div>
           <div>
             <h1
-              className="cursor-pointer hover:text-white"
+              className="cursor-pointer text-white hover:text-customblue"
               onClick={() => scrollToSection("why-choose-us")}
             >
               ჩვენს შესახებ
             </h1>
           </div>
           <div onClick={() => scrollToSection("services")}>
-            <h1 className="cursor-pointer hover:text-white">სერვისები</h1>
+            <h1 className="cursor-pointer text-white hover:text-customblue">
+              სერვისები
+            </h1>
           </div>
           <div onClick={() => scrollToSection("doctors")}>
-            <h1 className="cursor-pointer hover:text-white">ექიმები</h1>
+            <h1 className="cursor-pointer text-white hover:text-customblue">
+              ექიმები
+            </h1>
           </div>
-         
           <div onClick={() => scrollToSection("contacts")}>
-            <h1 className="cursor-pointer hover:text-white">კონტაქტი</h1>
+            <h1 className="cursor-pointer text-white hover:text-customblue">
+              კონტაქტი
+            </h1>
           </div>
           <div>
             <CustomButton
               onClick={() => scrollToSection("contacts")}
               text="დაჯავშნე ვიზიტი"
               textColor="text-blue-950"
-              width="w-[200px]"
+              textSize="2xl:text-[16px] xl:text-[14px]"
+              width="2xl:w-[200px] xl:w-[180px]"
               height="h-[50px]"
               marginTop="mt-0"
               backgroundColor="bg-white"
               rounded="rounded-full"
               imgHoverEffect="hover:invert"
-              hoverEffect=" hover:text-black hover:border hover:border-black"
+              hoverEffect=" hover:text-white hover:border hover:border-black hover:bg-customblue"
+            />
+          </div>
+
+          {/* Language toggle button */}
+          <div onClick={toggleLanguage} className="cursor-pointer">
+            <img
+              src={isEnglish ? "/flag1.svg" : "/flag2.svg"} // Conditional rendering of flags
+              alt="language flag"
+              className="w-[30px] h-[20px] 2xl:ml-4"
             />
           </div>
         </div>
 
         <div
-          className="w-[39px] h-[39px] block xl:hidden"
+          className="w-[39px] h-[39px] xl:hidden  flex items-center justify-center"
           onClick={() => setNav(true)}
         >
-          <img src="/burgermenu.png" alt="hamburger menu" className=" cursor-pointer" />
+          <img
+            src="/burg.png"
+            alt="hamburger menu"
+            className=" cursor-pointer w-[25px]"
+          />
         </div>
       </div>
       <HamburgerMenu nav={nav} setNav={setNav} />

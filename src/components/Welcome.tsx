@@ -19,7 +19,7 @@ function Welcome() {
   }, []);
 
   return (
-    <div className="relative w-full" id="start" style={{ height: "600px" }}>
+    <div className="relative w-full h-[130px] sm:h-[200px] md:h-[300px] lg:h-[400px] 2xl:h-[600px]" id="start">
       {images.map((src, index) => (
         <img
           key={index}

@@ -35,23 +35,25 @@ const servicesData = [
 
 const Services: React.FC = () => {
   return (
-    <div className="my-10 px-4 bg-customblue" id="services">
-      <h2 className="text-[25px] text-customWhite text-center py-10">
+    <div className="lg:my-10 my-6 px-4 bg-customblue" id="services">
+      <h2 className="xl:text-[25px] text-[18px] sm:text-[20px] md:text-[24px] font-mrglovani text-customWhite text-center py-10">
         ჩვენი სერვისები
       </h2>
-      <div className="grid md:w-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center py-2">
+      <div className="grid md:w-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 place-items-center lg:py-2">
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg p-6 my-4 flex flex-col items-center transition-transform transform hover:scale-105 w-[400px] md:w-[350px] lg:w-[300px] xl:w-[350px]"
+            className="bg-white rounded-lg shadow-lg p-6 my-4 flex flex-col items-center transition-transform transform hover:scale-105 w-[300px] sm:w-[270px] md:w-[330px] lg:w-[300px] xl:w-[350px]"
           >
             <img
               src={service.logo}
               alt={service.title}
               className="w-16 h-16 mb-4"
             />
-            <h3 className="text-[16px] font-semibold mb-2">{service.title}</h3>
-            <p className="text-gray-600 text-center text-[13px]">
+            <h3 className="text-[16px] font-mrglovani font-semibold mb-2">
+              {service.title}
+            </h3>
+            <p className="text-gray-600 font-arial text-center text-[13px]">
               {service.description}
             </p>
           </div>
