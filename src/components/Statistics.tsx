@@ -10,7 +10,7 @@ const Statistics: React.FC = () => {
   // };
 
   return (
-    <div className="bg-gray-300 xl:p-10 p-4 xl:mt-12 mt-32 sm:mt-40 md:mt-32 lg:mt-4 h-[400px] sm:h-[250px] xl:h-[400px] lg:h-[300px]">
+    <div className="bg-gray-300 xl:p-10 p-4 xl:mt-12 mt-36 sm:mt-40 md:mt-32 lg:mt-4 h-[400px] sm:h-[250px] xl:h-[400px] lg:h-[300px]">
       {/* Invisible Slider Section */}
       <div className="xl:mb-4 flex justify-center">
         <label className="lg:text-[25px] font-mrglovani xl:p-2 text-[18px] sm:text-[20px] md:text-[24px] font-quinapple text-customDarkBlue">
