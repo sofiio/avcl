@@ -3,9 +3,36 @@ import CustomButton from "./CustomButton";
 import HamburgerMenu from "./HamburgerMenu";
 
 // Define a functional component type
-const Header: React.FC = () => {
+const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({ isEnglish, toggleLanguage }) => {
   const [nav, setNav] = useState<boolean>(false);
-  const [isEnglish, setIsEnglish] = useState<boolean>(true); // State to toggle the flag
+
+  // Language map for English and Georgian text
+  const languageMap = {
+    start: {
+      georgian: "მთავარი",
+      english: "Main",
+    },
+    aboutUs: {
+      georgian: "ჩვენს შესახებ",
+      english: "About Us",
+    },
+    services: {
+      georgian: "სერვისები",
+      english: "Services",
+    },
+    doctors: {
+      georgian: "ექიმები",
+      english: "Doctors",
+    },
+    contacts: {
+      georgian: "კონტაქტი",
+      english: "Contact Us",
+    },
+    buttonText: {
+      georgian: "დაჯავშნე ვიზიტი",
+      english: "Book a Visit",
+    },
+  };
 
   // Function to get the height of the sticky header dynamically
   const getHeaderHeight = (): number => {
@@ -23,11 +50,6 @@ const Header: React.FC = () => {
         behavior: "smooth",
       });
     }
-  };
-
-  // Function to toggle language flag
-  const toggleLanguage = () => {
-    setIsEnglish(!isEnglish); // Toggle between English and Georgian flags
   };
 
   return (
@@ -48,7 +70,7 @@ const Header: React.FC = () => {
         <div className="hidden xl:flex items-center space-x-[32px] text-customWhite font-mrglovani font-bold 2xl:text-[16px] xl:text-[14px]">
           <div onClick={() => scrollToSection("start")}>
             <h1 className="cursor-pointer text-white hover:text-customblue ">
-              მთავარი
+              {isEnglish ? languageMap.start.english : languageMap.start.georgian}
             </h1>
           </div>
           <div>
@@ -56,28 +78,28 @@ const Header: React.FC = () => {
               className="cursor-pointer text-white hover:text-customblue"
               onClick={() => scrollToSection("why-choose-us")}
             >
-              ჩვენს შესახებ
+              {isEnglish ? languageMap.aboutUs.english : languageMap.aboutUs.georgian}
             </h1>
           </div>
           <div onClick={() => scrollToSection("services")}>
             <h1 className="cursor-pointer text-white hover:text-customblue">
-              სერვისები
+              {isEnglish ? languageMap.services.english : languageMap.services.georgian}
             </h1>
           </div>
           <div onClick={() => scrollToSection("doctors")}>
             <h1 className="cursor-pointer text-white hover:text-customblue">
-              ექიმები
+              {isEnglish ? languageMap.doctors.english : languageMap.doctors.georgian}
             </h1>
           </div>
           <div onClick={() => scrollToSection("contacts")}>
             <h1 className="cursor-pointer text-white hover:text-customblue">
-              კონტაქტი
+              {isEnglish ? languageMap.contacts.english : languageMap.contacts.georgian}
             </h1>
           </div>
           <div>
             <CustomButton
               onClick={() => scrollToSection("contacts")}
-              text="დაჯავშნე ვიზიტი"
+              text={isEnglish ? languageMap.buttonText.english : languageMap.buttonText.georgian}
               textColor="text-blue-950"
               textSize="2xl:text-[16px] xl:text-[14px]"
               width="2xl:w-[200px] xl:w-[180px]"
@@ -93,7 +115,7 @@ const Header: React.FC = () => {
           {/* Language toggle button */}
           <div onClick={toggleLanguage} className="cursor-pointer">
             <img
-              src={isEnglish ? "/flag1.svg" : "/flag2.svg"} // Conditional rendering of flags
+              src={isEnglish ? "/flag2.svg" : "/flag1.svg"} // Initially show the Georgian flag
               alt="language flag"
               className="w-[30px] h-[20px] 2xl:ml-4"
             />
