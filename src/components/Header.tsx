@@ -3,7 +3,10 @@ import CustomButton from "./CustomButton";
 import HamburgerMenu from "./HamburgerMenu";
 
 // Define a functional component type
-const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({ isEnglish, toggleLanguage }) => {
+const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({
+  isEnglish,
+  toggleLanguage,
+}) => {
   const [nav, setNav] = useState<boolean>(false);
 
   // Language map for English and Georgian text
@@ -70,7 +73,9 @@ const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({ 
         <div className="hidden xl:flex items-center space-x-[32px] text-customWhite font-mrglovani font-bold 2xl:text-[16px] xl:text-[14px]">
           <div onClick={() => scrollToSection("start")}>
             <h1 className="cursor-pointer text-white hover:text-customblue ">
-              {isEnglish ? languageMap.start.english : languageMap.start.georgian}
+              {isEnglish
+                ? languageMap.start.english
+                : languageMap.start.georgian}
             </h1>
           </div>
           <div>
@@ -78,28 +83,40 @@ const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({ 
               className="cursor-pointer text-white hover:text-customblue"
               onClick={() => scrollToSection("why-choose-us")}
             >
-              {isEnglish ? languageMap.aboutUs.english : languageMap.aboutUs.georgian}
+              {isEnglish
+                ? languageMap.aboutUs.english
+                : languageMap.aboutUs.georgian}
             </h1>
           </div>
           <div onClick={() => scrollToSection("services")}>
             <h1 className="cursor-pointer text-white hover:text-customblue">
-              {isEnglish ? languageMap.services.english : languageMap.services.georgian}
+              {isEnglish
+                ? languageMap.services.english
+                : languageMap.services.georgian}
             </h1>
           </div>
           <div onClick={() => scrollToSection("doctors")}>
             <h1 className="cursor-pointer text-white hover:text-customblue">
-              {isEnglish ? languageMap.doctors.english : languageMap.doctors.georgian}
+              {isEnglish
+                ? languageMap.doctors.english
+                : languageMap.doctors.georgian}
             </h1>
           </div>
           <div onClick={() => scrollToSection("contacts")}>
             <h1 className="cursor-pointer text-white hover:text-customblue">
-              {isEnglish ? languageMap.contacts.english : languageMap.contacts.georgian}
+              {isEnglish
+                ? languageMap.contacts.english
+                : languageMap.contacts.georgian}
             </h1>
           </div>
           <div>
             <CustomButton
               onClick={() => scrollToSection("contacts")}
-              text={isEnglish ? languageMap.buttonText.english : languageMap.buttonText.georgian}
+              text={
+                isEnglish
+                  ? languageMap.buttonText.english
+                  : languageMap.buttonText.georgian
+              }
               textColor="text-blue-950"
               textSize="2xl:text-[16px] xl:text-[14px]"
               width="2xl:w-[200px] xl:w-[180px]"
@@ -133,7 +150,12 @@ const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({ 
           />
         </div>
       </div>
-      <HamburgerMenu nav={nav} setNav={setNav} />
+      <HamburgerMenu
+        nav={nav}
+        setNav={setNav}
+        isEnglish={isEnglish} // Pass isEnglish as a prop
+        toggleLanguage={toggleLanguage} // Pass toggleLanguage as a prop
+      />
     </div>
   );
 };
