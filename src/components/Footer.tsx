@@ -24,7 +24,7 @@ function Footer({
       >
         <div className="2xl:max-w-[1312px] xl:h-[400px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] md:p-4 2xl:p-0 mx-auto">
           <div className="h-[320px] xl:border-b xl:flex xl:flex-row xl:pt-[80px] pt-[20px]">
-            <div className="2xl:w-[500px] w-[340px] md:w-[700px] sm:w-[500px] xl:h-[223px] h-[190px] md:h-[200px] space-y-4 mx-auto xl:mx-0">
+            <div className="2xl:w-[500px] w-[330px] p-2 sm:p-0 md:w-[700px] sm:w-[500px] xl:h-[223px] h-[190px] md:h-[200px] space-y-4 mx-auto xl:mx-0">
               <img
                 src="/favicon.svg"
                 alt=""
@@ -49,9 +49,9 @@ function Footer({
             </div>
 
             <div className="flex md:flex-row flex-col mt-0 justify-center md:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
-              <div className="w-[322px] font-mrglovani xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
+              <div className="w-[322px] p-2 sm:p-0 font-mrglovani xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
                 <div className="flex space-x-2">
-                  <img src="/location.jpg" alt="" className="w-[20px]" />
+                  <img src="/location.png" alt="" className="w-[20px]" />
                   <h1
                     className={`md:text-black font-mrglovani text-${textColor} text-[13px]`}
                   >
@@ -62,7 +62,7 @@ function Footer({
                 </div>
 
                 <div className="flex space-x-2">
-                  <img src="/location.jpg" alt="" className="w-[20px]" />
+                  <img src="/location.png" alt="" className="w-[20px]" />
                   <h1 className={`md:text-black text-${textColor} text-[13px]`}>
                     {isEnglish
                       ? "Batumi, P. Melikishvili 102B"
@@ -70,7 +70,7 @@ function Footer({
                   </h1>
                 </div>
                 <div className="flex space-x-2">
-                  <img src="/location.jpg" alt="" className="w-[20px]" />
+                  <img src="/location.png" alt="" className="w-[20px]" />
                   <h1 className={`md:text-black text-${textColor} text-[13px]`}>
                     {isEnglish
                       ? "Samtredia, Javakhishvili 10"
@@ -78,7 +78,7 @@ function Footer({
                   </h1>
                 </div>
                 <div className="flex space-x-2">
-                  <img src="/location.jpg" alt="" className="w-[20px]" />
+                  <img src="/location.png" alt="" className="w-[20px]" />
                   <h1 className={`md:text-black text-${textColor} text-[13px]`}>
                     {isEnglish
                       ? "Khoni, Mose Khoneli 3"
@@ -86,7 +86,7 @@ function Footer({
                   </h1>
                 </div>
                 <div className="flex space-x-2">
-                  <img src="/location.jpg" alt="" className="w-[20px]" />
+                  <img src="/location.png" alt="" className="w-[20px]" />
                   <h1 className={`md:text-black text-${textColor} text-[13px]`}>
                     {isEnglish
                       ? "Tkibuli, Gamsakhurdia 51"
@@ -95,9 +95,9 @@ function Footer({
                 </div>
               </div>
               <div>
-                <div className="w-[322px] font-mrglovani xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
+                <div className="w-[322px] p-2 sm:p-0 font-mrglovani xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
                   <div className="flex space-x-2">
-                    <img src="/location.jpg" alt="" className="w-[20px]" />
+                    <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
                       className={`md:text-black text-${textColor} text-[13px]`}
                     >
@@ -107,7 +107,7 @@ function Footer({
                     </h1>
                   </div>
                   <div className="flex space-x-2">
-                    <img src="/location.jpg" alt="" className="w-[20px]" />
+                    <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
                       className={`md:text-black text-${textColor} text-[13px]`}
                     >
@@ -117,7 +117,7 @@ function Footer({
                     </h1>
                   </div>
                   <div className="flex space-x-2">
-                    <img src="/location.jpg" alt="" className="w-[20px]" />
+                    <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
                       className={`md:text-black text-${textColor} text-[13px]`}
                     >
@@ -127,7 +127,7 @@ function Footer({
                     </h1>
                   </div>
                   <div className="flex space-x-2">
-                    <img src="/location.jpg" alt="" className="w-[20px]" />
+                    <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
                       className={`md:text-black text-${textColor} text-[13px]`}
                     >
@@ -137,7 +137,7 @@ function Footer({
                     </h1>
                   </div>
                   <div className="flex space-x-2">
-                    <img src="/location.jpg" alt="" className="w-[20px]" />
+                    <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
                       className={`md:text-black text-${textColor} text-[13px]`}
                     >
@@ -160,7 +160,7 @@ function Footer({
             </div>
           </div>
         </div>
-        <h1 className="text-[14px] xl:hidden mt-[300px] md:mt-[150px] flex items-center justify-center text-black">
+        <h1 className="text-[14px] xl:hidden mt-[300px] md:mt-[150px] flex items-center justify-center text-white md:text-black">
           {isEnglish
             ? "© 2024.All rights reserved."
             : "© 2024. ყველა უფლება დაცულია."}
