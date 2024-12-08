@@ -12,7 +12,7 @@ const WhyChooseUs: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> 
     },
     description: {
       georgian:
-        "დეიშვილის თვალის კლინიკა თანამედროვე ტექნოლოგიებით აღჭურვილი ახალი მრავალპროფილური კლინიკაა ქუთაისში. დაარსების დღიდან ჩვენი მთავარი მიზანი პაციენტების ჯანმრთელობასა და მუდმივ განვითარებაზე ზრუნვა იყო. ლ.ადეიშვილის თვალის კლინიკა სრულყოფილ და ხარისხიან ოფთალმოლოგიურ სერვისს მრავალი წლის განმავლობაში სთავაზობდა პაციენტებს არამარტო ქუთაისის, არამედ დასავლეთ საქართველოს რეგიონალური მასშტაბით. ამ დროის განმავლობაში, პაციენტებთან მუშაობის წარმატებულმა გამოცდილებამ საფუძველი ჩაუყარა კლინიკის გაფართოების მიზანს და 2024 წლის ნოემბრიდან ადეიშვილის კლინიკა ახალ სივრცეში ვიზიტორებს მათ საჭიროებებსა და კომფორტზე მორგებულ სრულ სამედიცინო მომსახურებას სთავაზობს.",
+        "ადეიშვილის თვალის კლინიკა თანამედროვე ტექნოლოგიებით აღჭურვილი ახალი მრავალპროფილური კლინიკაა ქუთაისში. დაარსების დღიდან ჩვენი მთავარი მიზანი პაციენტების ჯანმრთელობასა და მუდმივ განვითარებაზე ზრუნვა იყო. ლ.ადეიშვილის თვალის კლინიკა სრულყოფილ და ხარისხიან ოფთალმოლოგიურ სერვისს მრავალი წლის განმავლობაში სთავაზობდა პაციენტებს არამარტო ქუთაისის, არამედ დასავლეთ საქართველოს რეგიონალური მასშტაბით. ამ დროის განმავლობაში, პაციენტებთან მუშაობის წარმატებულმა გამოცდილებამ საფუძველი ჩაუყარა კლინიკის გაფართოების მიზანს და 2024 წლის ნოემბრიდან ადეიშვილის კლინიკა ახალ სივრცეში ვიზიტორებს მათ საჭიროებებსა და კომფორტზე მორგებულ სრულ სამედიცინო მომსახურებას სთავაზობს.",
       english:
         "Adeishvili's Eye Clinic is a new multi-profile clinic equipped with modern technology in Kutaisi. Since its establishment, our main goal has been to care for the health of patients and their constant development. The Adeishvili Eye Clinic has been offering high-quality ophthalmology services to patients not only in Kutaisi but also throughout the western regions of Georgia for many years. Over this time, successful experience in working with patients laid the foundation for the clinic's expansion plans, and since November 2024, Adeishvili Clinic offers visitors fully tailored medical services in a new space designed around their needs and comfort.",
     },
@@ -38,7 +38,7 @@ const WhyChooseUs: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> 
               className="w-full rounded-md"
             />
           </div>
-          <div className="md:w-[670px] lg:w-[750px] xl:w-[670px] sm:w-[500px] w-[321px] md:h-[480px] mx-auto xl:mx-0 h-[812px] mt-4 xl:ml-4 2xl:ml-0">
+          <div className="w-auto sm:w-[500px] md:w-[670px] lg:w-[750px] xl:w-[670px] h-[400px] sm:h-[480px] md:h-[480px] xl:h-[480px] mx-auto xl:mx-0 sm:mt-4 mt-6 xl:ml-4 sm:ml-auto ml-4 2xl:ml-0">
             <h1 className="md:text-[16px] font-arial text-[14px] sm:text-[16px]">
               {isEnglish
                 ? languageMap.description.english

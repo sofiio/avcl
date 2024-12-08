@@ -47,7 +47,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
         <div className="mx-auto flex justify-between items-center pt-4">
           <div onClick={toggleLanguage} className="cursor-pointer">
             <img
-              src={isEnglish ? "/flag1.svg" : "/flag2.svg"} // Conditional rendering of flags
+              src={isEnglish ? "/flag2.svg" : "/flag1.svg"} // Conditional rendering of flags
               alt="language flag"
               className="w-[30px] h-[20px] 2xl:ml-4"
             />
