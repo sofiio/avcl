@@ -4,51 +4,51 @@ import React from "react";
 const servicesData = [
   {
     logo: "/8.jpg", // Replace with your image URL
-    title: { georgian: "სამსახური ერთი", english: "Service One" },
-    description: {
-      georgian: "აღწერა სამსახურის ერთი.",
-      english: "Description for Service One.",
-    },
+    title: { georgian: "პედიატრი", english: "Pediatrics" },
   },
   {
     logo: "/8.jpg", // Replace with your image URL
-    title: { georgian: "სამსახური ორი", english: "Service Two" },
-    description: {
-      georgian: "აღწერა სამსახურის ორი.",
-      english: "Description for Service Two.",
-    },
+    title: { georgian: "ენდოკრინოლოგი", english: "Endocrinology" },
   },
   {
     logo: "/8.jpg", // Replace with your image URL
-    title: { georgian: "სამსახური სამი", english: "Service Three" },
-    description: {
-      georgian: "აღწერა სამსახურის სამი.",
-      english: "Description for Service Three.",
-    },
+    title: { georgian: "გინეკოლოგი", english: "Gynecology" },
   },
   {
     logo: "/8.jpg", // Replace with your image URL
-    title: { georgian: "სამსახური ოთხი", english: "Service Four" },
-    description: {
-      georgian: "აღწერა სამსახურის ოთხი.",
-      english: "Description for Service Four.",
-    },
+    title: { georgian: "ოფთალმოლოგი", english: "Ophthalmology" },
   },
   {
     logo: "/8.jpg", // Replace with your image URL
-    title: { georgian: "სამსახური ხუთი", english: "Service Five" },
-    description: {
-      georgian: "აღწერა სამსახურის ხუთი.",
-      english: "Description for Service Five.",
-    },
+    title: { georgian: "ოტორინოლარინგოლოგი", english: "Otorhinolaryngology" },
   },
   {
     logo: "/8.jpg", // Replace with your image URL
-    title: { georgian: "სამსახური ექვსი", english: "Service Six" },
-    description: {
-      georgian: "აღწერა სამსახურის ექვსი.",
-      english: "Description for Service Six.",
-    },
+    title: { georgian: "ტრამვატოლოგი", english: "Traumatology" },
+  },
+  {
+    logo: "/8.jpg", // Replace with your image URL
+    title: { georgian: "დერმატოლოგი", english: "Dermatology" },
+  },
+  {
+    logo: "/8.jpg", // Replace with your image URL
+    title: { georgian: "სტომატოლოგი", english: "Dentistry" },
+  },
+  {
+    logo: "/8.jpg", // Replace with your image URL
+    title: { georgian: "რადიოლოგი", english: "Radiology" },
+  },
+  {
+    logo: "/8.jpg", // Replace with your image URL
+    title: { georgian: "ნევროლოგი", english: "Neurology" },
+  },
+  {
+    logo: "/8.jpg", // Replace with your image URL
+    title: { georgian: "კარდიოლოგი", english: "Cardiology" },
+  },
+  {
+    logo: "/8.jpg", // Replace with your image URL
+    title: { georgian: "უროლოგი", english: "Urology" },
   },
 ];
 
@@ -65,16 +65,13 @@ const Services: React.FC<{ isEnglish: boolean }> = ({ isEnglish }) => {
             className="bg-white rounded-lg shadow-lg p-6 my-4 flex flex-col items-center transition-transform transform hover:scale-105 w-[300px] sm:w-[270px] md:w-[330px] lg:w-[300px] xl:w-[350px]"
           >
             <img
-              src={service.logo}
+              src="ლოგო.svg"
               alt={isEnglish ? service.title.english : service.title.georgian}
-              className="w-16 h-16 mb-4"
+              className="w-8 h-8 mb-6"
             />
             <h3 className="text-[16px] font-mrglovani font-semibold mb-2">
               {isEnglish ? service.title.english : service.title.georgian}
             </h3>
-            <p className="text-gray-600 font-arial text-center text-[13px]">
-              {isEnglish ? service.description.english : service.description.georgian}
-            </p>
           </div>
         ))}
       </div>

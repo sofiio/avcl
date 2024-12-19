@@ -43,8 +43,20 @@ function Footer({
                   : "ადეიშვილის კლინიკა დასავლეთ საქართველოს უმეტეს ნაწილში ფლობს ფილიალებს (ტექსტი დასარედაქტირებელია)"}
               </h1>
               <div className="flex space-x-4">
-                <img src="/face.svg" alt="" className="w-6 h-6" />
-                <img src="/insta.svg" alt="" className="w-6 h-6" />
+                <a
+                  href="https://www.facebook.com/share/1F8c9KgoMH/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/face.svg" alt="Facebook" className="w-6 h-6" />
+                </a>
+                <a
+                  href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fl.adeishvilieyeclinic%2F%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR3DTmSqQXA8Wy6FqJ0KpHdPsGbxpxY31CoLorASX2EfJb77PRs4S7DJbxk_aem_l_--bH2B3AZLTBdESCRsuA&h=AT2xnN9FurwpTEHxwsO_cprmKW8l_UVPEkQRmLMBCFQvg1iFh_O0hUYzZ8ZS2JxBYqJ19A4HPPcB7oMXqklYNWeFJOag-DK0IyA8HWf79gKvnaZBpenzs0pc1N2bZxkzO_GRE9LLKKF3_QYRCnjFyg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src="/insta.svg" alt="Instagram" className="w-6 h-6" />
+                </a>
               </div>
             </div>
 
