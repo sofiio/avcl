@@ -54,7 +54,7 @@ interface Banner {
   };
 }
 
-const STRAPI_URL = "http://localhost:1337/api/banners?populate=*"; // Strapi API URL
+const STRAPI_URL = "https://oyster-app-3zokm.ondigitalocean.app/api/banners?populate=*"; // Strapi API URL
 
 function Welcome() {
   const [images, setImages] = useState<string[]>([]); // Array of image URLs
@@ -76,7 +76,7 @@ function Welcome() {
           // Extract all images from each banner
           const bannerImages: string[] = data.data.flatMap((banner) => 
             banner.attributes.bannerPic.data.map(image => 
-              `http://localhost:1337${image.attributes.url}` // Construct the full URL
+              `https://oyster-app-3zokm.ondigitalocean.app${image.attributes.url}` // Construct the full URL
             )
           );
 

@@ -29,7 +29,7 @@ const Statistics: React.FC<StatisticsProps> = ({ isEnglish }) => {
   useEffect(() => {
     const fetchStatistics = async () => {
       try {
-        const response = await fetch("http://localhost:1337/api/statistics?populate=*");
+        const response = await fetch("https://oyster-app-3zokm.ondigitalocean.app/api/statistics?populate=*");
         const data = await response.json();
         setStatistics(data.data); // Update state with the fetched data
         setLoading(false);
@@ -63,7 +63,7 @@ const Statistics: React.FC<StatisticsProps> = ({ isEnglish }) => {
           >
             {/* Display the image from Strapi */}
             <img
-              src={`http://localhost:1337${statistic.attributes.statisticPic.data[0].attributes.url}`}
+              src={`https://oyster-app-3zokm.ondigitalocean.app${statistic.attributes.statisticPic.data[0].attributes.url}`}
               alt="Statistic Icon"
               className="md:w-8 md:h-8 w-4 h-4 sm:w-6 sm:h-6 mb-4"
             />

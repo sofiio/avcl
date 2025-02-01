@@ -151,7 +151,7 @@ const DoctorsSlider: React.FC<{
   useEffect(() => {
     const fetchDoctorsData = async () => {
       try {
-        const response = await axios.get("http://localhost:1337/api/our-doctors?populate=*");
+        const response = await axios.get("https://oyster-app-3zokm.ondigitalocean.app/api/our-doctors?populate=*");
         setDoctorsData(response.data.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -203,7 +203,7 @@ const DoctorsSlider: React.FC<{
           <div key={doctor.id} className="p-4">
             <div className="bg-customblue rounded-lg shadow-md flex flex-col items-center p-4 mx-auto max-w-xs">
               <img
-                src={`http://localhost:1337${doctor.attributes.doctorPic.data.attributes.url}`}
+                src={`https://oyster-app-3zokm.ondigitalocean.app${doctor.attributes.doctorPic.data.attributes.url}`}
                 alt={doctor.attributes.NameEnglish} // Use the English name for alt
                 className="w-[230px] h-48 rounded-md mb-2"
               />

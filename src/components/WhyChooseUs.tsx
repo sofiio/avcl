@@ -77,7 +77,7 @@ const WhyChooseUs: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> 
   // Fetch data from Strapi API
   useEffect(() => {
     axios
-      .get("http://localhost:1337/api/clinics?populate=*") // Ensure you're including the 'populate' query for related data like images
+      .get("https://oyster-app-3zokm.ondigitalocean.app/api/clinics?populate=*") // Ensure you're including the 'populate' query for related data like images
       .then((response) => {
         // Assuming Strapi is returning the correct data
         const clinicAttributes = response.data.data[0].attributes;
@@ -98,7 +98,7 @@ const WhyChooseUs: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> 
     : clinicData.aboutUsTextGeorgian || ""; // If not English, show the Georgian text
 
   // Get the image URL from Strapi data (make sure to prefix with your API base URL)
-  const baseUrl = "http://localhost:1337"; // Your Strapi server URL
+  const baseUrl = "https://oyster-app-3zokm.ondigitalocean.app"; // Your Strapi server URL
   const imageUrl = clinicData.aboutUsPic?.data?.attributes?.url
     ? `${baseUrl}${clinicData.aboutUsPic.data.attributes.url}` // Concatenate the full URL
     : "/chvensshesakheb.png"; // Fallback to default image if not found
