@@ -70,7 +70,7 @@ const Header: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> = ({
           />
         </div>
 
-        <div className="hidden xl:flex items-center space-x-[32px] text-customWhite font-mrglovani font-bold 2xl:text-[16px] xl:text-[14px]">
+        <div className="hidden xl:flex items-center space-x-[32px] text-customWhite font-mrglovani 2xl:text-[16px] xl:text-[14px]">
           <div onClick={() => scrollToSection("start")}>
             <h1 className="cursor-pointer text-white hover:text-customblue ">
               {isEnglish

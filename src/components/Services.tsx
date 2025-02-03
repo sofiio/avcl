@@ -69,7 +69,7 @@ const Services: React.FC<{ isEnglish: boolean }> = ({ isEnglish }) => {
               alt={isEnglish ? service.title.english : service.title.georgian}
               className="w-8 h-8 mb-6"
             />
-            <h3 className="text-[16px] font-mrglovani font-semibold mb-2">
+            <h3 className="text-[16px] font-arial font-semibold mb-2">
               {isEnglish ? service.title.english : service.title.georgian}
             </h3>
           </div>

@@ -14,11 +14,12 @@ export default {
         customDarkBlue: '#040059'
       },
       fontFamily: {
-        mrglovani: ['"BPG Mrgvlovani Caps 2010"', 'sans-serif'], // Add the font here
+        mrglovani: ['MyCustomFont'], // Add the font here
       },
       fontFamily: {
-        arial: ['"Geo-Arial"', 'sans-serif'], // Add the font here
+        arial: ['Arial'], // Add the font here
       },
+
       animation: {
         textMove: 'textMove 2s ease-in-out infinite',
       },

@@ -62,7 +62,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
         </div>
 
         <nav>
-          <div className="flex flex-col p-4 mt-8 space-y-8 font-arial text-[16px]">
+          <div className="flex flex-col p-4 mt-8 space-y-8 font-mrglovani text-[16px]">
             <div>
               <h1
                 className="cursor-pointer hover:text-customblue"

@@ -39,8 +39,8 @@ function Footer({
                 className={`md:text-black font-arial text-${textColor} md:text-[16px] text-[14px]`}
               >
                 {isEnglish
-                  ? "Adeishvili Clinic has branches in most parts of Western Georgia (Text to be edited)"
-                  : "ადეიშვილის კლინიკა დასავლეთ საქართველოს უმეტეს ნაწილში ფლობს ფილიალებს (ტექსტი დასარედაქტირებელია)"}
+                  ? "Adeishvili Clinic has branches in most parts of Western Georgia"
+                  : "ადეიშვილის კლინიკა დასავლეთ საქართველოს უმეტეს ნაწილშია წარმოდგენილი"}
               </h1>
               <div className="flex space-x-4">
                 <a
@@ -61,11 +61,11 @@ function Footer({
             </div>
 
             <div className="flex md:flex-row flex-col mt-0 justify-center md:justify-start xl:w-auto w-[343px] sm:w-[500px] mx-auto xl:mx-0 md:w-[700px]">
-              <div className="w-[322px] p-2 sm:p-0 font-mrglovani xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
+              <div className="w-[322px] p-2 sm:p-0  xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
                 <div className="flex space-x-2">
                   <img src="/location.png" alt="" className="w-[20px]" />
                   <h1
-                    className={`md:text-black font-mrglovani text-${textColor} text-[13px]`}
+                    className={`md:text-black text-${textColor} text-[13px] font-arial`}
                   >
                     {isEnglish
                       ? "Kutaisi, Javakhishvili 91"
@@ -75,7 +75,7 @@ function Footer({
 
                 <div className="flex space-x-2">
                   <img src="/location.png" alt="" className="w-[20px]" />
-                  <h1 className={`md:text-black text-${textColor} text-[13px]`}>
+                  <h1 className={`md:text-black text-${textColor} text-[13px] font-arial`}>
                     {isEnglish
                       ? "Batumi, P. Melikishvili 102B"
                       : "ბათუმი, პ.მელიქიშვილის 102 ბ"}
@@ -83,7 +83,7 @@ function Footer({
                 </div>
                 <div className="flex space-x-2">
                   <img src="/location.png" alt="" className="w-[20px]" />
-                  <h1 className={`md:text-black text-${textColor} text-[13px]`}>
+                  <h1 className={`md:text-black text-${textColor} text-[13px] font-arial`}>
                     {isEnglish
                       ? "Samtredia, Javakhishvili 10"
                       : "სამტრედია, ჯავახიშვილის 10"}
@@ -91,7 +91,7 @@ function Footer({
                 </div>
                 <div className="flex space-x-2">
                   <img src="/location.png" alt="" className="w-[20px]" />
-                  <h1 className={`md:text-black text-${textColor} text-[13px]`}>
+                  <h1 className={`md:text-black text-${textColor} text-[13px] font-arial`}>
                     {isEnglish
                       ? "Khoni, Mose Khoneli 3"
                       : "ხონი, მოსე ხონელის 3"}
@@ -99,7 +99,7 @@ function Footer({
                 </div>
                 <div className="flex space-x-2">
                   <img src="/location.png" alt="" className="w-[20px]" />
-                  <h1 className={`md:text-black text-${textColor} text-[13px]`}>
+                  <h1 className={`md:text-black text-${textColor} text-[13px] font-arial`}>
                     {isEnglish
                       ? "Tkibuli, Gamsakhurdia 51"
                       : "ტყიბული, გამსახურდიას 51"}
@@ -107,11 +107,11 @@ function Footer({
                 </div>
               </div>
               <div>
-                <div className="w-[322px] p-2 sm:p-0 font-mrglovani xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
+                <div className="w-[322px] p-2 sm:p-0 xl:w-[250px] 2xl:w-[322px] h-[185px] 2xl:ml-[128px] xl:ml-[80px] text-[14px] flex flex-col space-y-4">
                   <div className="flex space-x-2">
                     <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
-                      className={`md:text-black text-${textColor} text-[13px]`}
+                      className={`md:text-black text-${textColor} text-[13px] font-arial`}
                     >
                       {isEnglish
                         ? "Vani, Solomon II 3"
@@ -121,7 +121,7 @@ function Footer({
                   <div className="flex space-x-2">
                     <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
-                      className={`md:text-black text-${textColor} text-[13px]`}
+                      className={`md:text-black text-${textColor} text-[13px] font-arial`}
                     >
                       {isEnglish
                         ? "Lanchkhuti, G. Kvirkvelia 16"
@@ -131,7 +131,7 @@ function Footer({
                   <div className="flex space-x-2">
                     <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
-                      className={`md:text-black text-${textColor} text-[13px]`}
+                      className={`md:text-black text-${textColor} text-[13px] font-arial`}
                     >
                       {isEnglish
                         ? "Senaki, D. Vahania N1"
@@ -141,7 +141,7 @@ function Footer({
                   <div className="flex space-x-2">
                     <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
-                      className={`md:text-black text-${textColor} text-[13px]`}
+                      className={`md:text-black text-${textColor} text-[13px] font-arial`}
                     >
                       {isEnglish
                         ? "Zugdidi, Kitiashvili N21"
@@ -151,7 +151,7 @@ function Footer({
                   <div className="flex space-x-2">
                     <img src="/location.png" alt="" className="w-[20px]" />
                     <h1
-                      className={`md:text-black text-${textColor} text-[13px]`}
+                      className={`md:text-black text-${textColor} text-[13px] font-arial`}
                     >
                       {isEnglish
                         ? "Abasha, Varlam Chikovani 15"
@@ -162,9 +162,9 @@ function Footer({
               </div>
             </div>
           </div>
-          <div className="h-[50px] hidden xl:flex justify-between mt-[32px] text-[14px] font-sans">
+          <div className="h-[50px] hidden xl:flex justify-between mt-[32px] text-[14px] ">
             <div>
-              <h1 className="text-black text-[13px] font-mrglovani">
+              <h1 className="text-black text-[13px]">
                 {isEnglish
                   ? "© 2024.All rights reserved."
                   : "© 2024. ყველა უფლება დაცულია."}

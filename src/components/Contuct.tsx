@@ -47,7 +47,7 @@ const Contact: React.FC<ContactProps> = ({ isEnglish }) => {
           style={{ backgroundImage: "url('/contactbg.png')" }} // Replace with your image URL
         />
         <div className="relative z-10 flex flex-col justify-center items-center h-full text-white p-4 bg-black bg-opacity-50 text-sm md:text-lg">
-          <h3 className="sm:text-[16px] text-[14px] font-bold font-mrglovani">
+          <h3 className="sm:text-[16px] text-[14px] font-bold font-arial">
             {isEnglish ? languageMap.workingHours.english : languageMap.workingHours.georgian}
           </h3>
           <p className="sm:text-[13px] text-[10px] font-arial">
@@ -56,7 +56,7 @@ const Contact: React.FC<ContactProps> = ({ isEnglish }) => {
           <p className="sm:text-[13px] text-[10px] font-arial">
             {isEnglish ? languageMap.saturday.english : languageMap.saturday.georgian}
           </p>
-          <h3 className="sm:text-[16px] text-[10px] font-bold mt-4 font-mrglovani">
+          <h3 className="sm:text-[16px] text-[10px] font-bold mt-4 font-arial">
             {isEnglish ? languageMap.contact.english : languageMap.contact.georgian}
           </h3>
           <p className="sm:text-[13px] text-[10px] font-arial">
