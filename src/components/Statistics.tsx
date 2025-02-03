@@ -68,7 +68,7 @@ const Statistics: React.FC<StatisticsProps> = ({ isEnglish }) => {
               className="md:w-8 md:h-8 w-4 h-4 sm:w-6 sm:h-6 mb-4"
             />
             {/* Display the statistics text */}
-            <div className="text-[12px] sm:text-[13px] lg:text-[14px]">
+            <div className="text-[10px] lg:text-[12px] xl:text-[14px]">
               {isEnglish
                 ? statistic.attributes.StatEnglishText
                 : statistic.attributes.StatGeoText}
