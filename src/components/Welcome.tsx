@@ -169,14 +169,14 @@ function Welcome() {
   }
 
   return (
-    <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px]" id="start">
+    <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px]" id="start">
       {images.length > 0 ? (
         images.map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`Banner ${index + 1}`}
-            className={`absolute w-full h-full object-cover transition-all duration-700 ease-in-out ${
+            className={`absolute  h-full  transition-all duration-700 ease-in-out ${
               currentIndex === index ? "opacity-100 scale-100" : "opacity-0 scale-95"
             }`}
           />
