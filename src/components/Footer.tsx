@@ -164,7 +164,7 @@ function Footer({
           </div>
           <div className="h-[50px] hidden xl:flex justify-between mt-[32px] text-[14px] ">
             <div>
-              <h1 className="text-black text-[13px]">
+              <h1 className="text-black text-[13px] font-arial">
                 {isEnglish
                   ? "© 2024.All rights reserved."
                   : "© 2024. ყველა უფლება დაცულია."}
@@ -172,7 +172,7 @@ function Footer({
             </div>
           </div>
         </div>
-        <h1 className="text-[14px] xl:hidden mt-[300px] md:mt-[150px] flex items-center justify-center text-white md:text-black">
+        <h1 className="text-[14px] font-arial xl:hidden mt-[300px] md:mt-[150px] flex items-center justify-center text-white md:text-black">
           {isEnglish
             ? "© 2024.All rights reserved."
             : "© 2024. ყველა უფლება დაცულია."}

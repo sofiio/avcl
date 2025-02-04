@@ -70,7 +70,7 @@ const DoctorsSlider: React.FC<{
 
   return (
     <div className="w-full overflow-hidden" id="doctors">
-      <h2 className="text-[18px] sm:text-[20px] md:text-[24px] text-customDarkBlue text-center font-mrglovani mt-2 lg:mt-0">
+      <h2 className="text-[18px] sm:text-[20px] md:text-[24px] text-customDarkBlue text-center  mt-2 lg:mt-0">
         {isEnglish ? "Our Doctors" : "ჩვენი ექიმები"}
       </h2>
       <div className="flex justify-center mb-4">
@@ -89,7 +89,7 @@ const DoctorsSlider: React.FC<{
                 alt={doctor.attributes.NameEnglish} // Use the English name for alt
                 className="w-[230px] h-48 rounded-md mb-2"
               />
-              <h3 className="text-[16px] font-semibold">
+              <h3 className="text-[16px] font-semibold ">
                 {isEnglish
                   ? doctor.attributes.NameEnglish
                   : doctor.attributes.NameGeorgian}
