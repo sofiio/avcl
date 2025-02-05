@@ -14,7 +14,7 @@ export default {
         customDarkBlue: '#040059'
       },
       fontFamily: {
-        mrglovani: ['BPG Mrgvlovani Caps 2010', 'MyCustomFont'], // 'MyCustomFont' is fallback
+        mrglovani: ['BPG Mrgvlovani Caps 2010'], // 'MyCustomFont' is fallback
         arial: ['Arial'],
       },
 

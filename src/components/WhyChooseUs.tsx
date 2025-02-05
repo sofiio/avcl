@@ -39,7 +39,7 @@ const WhyChooseUs: React.FC<{ isEnglish: boolean; toggleLanguage: () => void }> 
     <>
       <div className="max-w-[1440px] mx-auto items-center" id="why-choose-us">
         <div className="xl:ml-[57px] h-[70px] sm:h-[80px] md:h-[90px] xl:h-[100px] xl:max-w-[1312px] lg:max-w-[1280px] md:max-w-[1024px] max-w-[640px] sm:max-w-[768px] xl:p-0 md:mt-[20px] flex text-center justify-center mx-auto xl:mx-0">
-          <h1 className="lg:text-[25px] font-mrglovani p-6 text-[18px] sm:text-[20px] md:text-[24px] text-customDarkBlue">
+          <h1 className="lg:text-[25px] font-arial p-6 text-[18px] sm:text-[20px] md:text-[24px] text-customDarkBlue">
             {isEnglish ? "About Us" : "ჩვენს შესახებ"}
           </h1>
         </div>

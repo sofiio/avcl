@@ -70,7 +70,7 @@ const DoctorsSlider: React.FC<{
 
   return (
     <div className="w-full overflow-hidden" id="doctors">
-      <h2 className="text-[18px] sm:text-[20px] md:text-[24px] text-customDarkBlue text-center  mt-2 lg:mt-0">
+      <h2 className="text-[18px] font-arial sm:text-[20px] md:text-[24px] text-customDarkBlue text-center  mt-2 lg:mt-0">
         {isEnglish ? "Our Doctors" : "ჩვენი ექიმები"}
       </h2>
       <div className="flex justify-center mb-4">

@@ -55,7 +55,7 @@ const servicesData = [
 const Services: React.FC<{ isEnglish: boolean }> = ({ isEnglish }) => {
   return (
     <div className="lg:my-10 my-6 px-4 bg-customblue" id="services">
-      <h2 className="xl:text-[25px] text-[18px] sm:text-[20px] md:text-[24px] font-mrglovani text-customWhite text-center py-10">
+      <h2 className="xl:text-[25px] text-[18px] sm:text-[20px] md:text-[24px] font-arial text-customWhite text-center py-10">
         {isEnglish ? "Our Services" : "ჩვენი სერვისები"}
       </h2>
       <div className="grid md:w-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8 place-items-center lg:py-2">

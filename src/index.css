@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'BPG Mrgvlovani Caps 2010';
-  src: url('public/assets/mrgvlovani.ttf') format('truetype'); /* URL to font in public folder */
+  src: url('/assets/bpg_mrgvlovani_caps_2010.ttf') format('truetype'); /* URL to font in public folder */
   font-weight: normal;
   font-style: normal;
 }
