@@ -34,8 +34,8 @@
 
 //         if (data?.data?.length > 0) {
 //           // Extract all images from each banner
-//           const bannerImages: string[] = data.data.flatMap((banner) => 
-//             banner.attributes.bannerPic.data.map(image => 
+//           const bannerImages: string[] = data.data.flatMap((banner) =>
+//             banner.attributes.bannerPic.data.map(image =>
 //               `https://oyster-app-3zokm.ondigitalocean.app${image.attributes.url}` // Construct the full URL
 //             )
 //           );
@@ -110,7 +110,8 @@ interface Banner {
   };
 }
 
-const STRAPI_URL = "https://oyster-app-3zokm.ondigitalocean.app/api/banners?populate=*"; // Strapi API URL
+const STRAPI_URL =
+  "https://oyster-app-3zokm.ondigitalocean.app/api/banners?populate=*"; // Strapi API URL
 
 function Welcome() {
   const [images, setImages] = useState<string[]>([]); // Array of image URLs
@@ -131,8 +132,9 @@ function Welcome() {
         if (data?.data?.length > 0) {
           // Extract all images from each banner
           const bannerImages: string[] = data.data.flatMap((banner) =>
-            banner.attributes.bannerPic.data.map((image) =>
-              `https://oyster-app-3zokm.ondigitalocean.app${image.attributes.url}` // Construct the full URL
+            banner.attributes.bannerPic.data.map(
+              (image) =>
+                `https://oyster-app-3zokm.ondigitalocean.app${image.attributes.url}` // Construct the full URL
             )
           );
 
@@ -169,25 +171,30 @@ function Welcome() {
   }
 
   return (
-    <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px]" id="start">
+    <div
+      className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[400px] xl:h-[500px] 2xl:h-[600px] w-full"
+      id="start"
+    >
       {images.length > 0 ? (
         images.map((src, index) => (
           <img
             key={index}
             src={src}
             alt={`Banner ${index + 1}`}
-            className={`absolute  h-full  transition-all duration-700 ease-in-out ${
-              currentIndex === index ? "opacity-100 scale-100" : "opacity-0 scale-95"
+            className={`absolute top-1/2 left-1/2 h-full w-auto max-w-full transform -translate-x-1/2 -translate-y-1/2 transition-all duration-700 ease-in-out ${
+              currentIndex === index
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-95"
             }`}
           />
         ))
       ) : (
-        <div>No images available</div>
+        <div className="flex items-center justify-center h-full">
+          No images available
+        </div>
       )}
     </div>
   );
 }
 
 export default Welcome;
-
-
